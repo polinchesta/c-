@@ -27,16 +27,12 @@
             g = Convert.ToInt32(Console.ReadLine());
 
             p1 = Program.func(a, b, f);
-            Console.WriteLine(p1);
             p2 = Program.func(f, g, c);
             p3 = Program.func(e, g, d);
 
             s1 = Math.Sqrt(p1 * (p1 - a) * (p1 - b) * (p1 - f)); // площадь треугольника a,b,f
-            Console.WriteLine(s1);
             s2 = Math.Sqrt(p2 * (p2 - f) * (p2 - g) * (p2 - c)); // площадь треугольника f,g,c
-            Console.WriteLine(s2);
             s3 = Math.Sqrt(p3 * (p3 - e) * (p3 - g) * (p3 - d)); // площадь треугольника e,g,d
-            Console.WriteLine(s3);
             s = s1 + s2 + s3;
 
             Console.WriteLine("Площадь пятиугольника равна = {0:F3}", s);
