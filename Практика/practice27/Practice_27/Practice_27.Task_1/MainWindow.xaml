@@ -1,0 +1,57 @@
+﻿<Window x:Class="Practice_26.Task_1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practice_26.Task_1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid RenderTransformOrigin="0.499,0.485">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="62*"/>
+            <RowDefinition Height="140*"/>
+            <RowDefinition Height="153*"/>
+            <RowDefinition Height="64*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="597*"/>
+            <ColumnDefinition Width="203*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="textBlockXMLPathFile" HorizontalAlignment="Left" Margin="10,9,0,9" TextWrapping="Wrap" VerticalAlignment="Center" Height="44" RenderTransformOrigin="0.5,0.5" Width="564">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Button x:Name="buttonExit" Grid.Column="1" Content="Выход" HorizontalAlignment="Left" Height="44" Margin="10,10,0,10" Grid.Row="3" VerticalAlignment="Center" Width="167" Click="buttonExit_Click"/>
+        <Button x:Name="buttonAdd" Content="Добавить" HorizontalAlignment="Left" Height="44" Margin="10,10,0,10" Grid.Row="3" VerticalAlignment="Center" Width="564" Click="buttonAdd_Click"/>
+        <Expander Grid.Column="1" Header="функцональность" HorizontalAlignment="Left" Height="221" Margin="10,8,0,0" VerticalAlignment="Top" Width="181" Grid.RowSpan="3">
+            <Grid Background="#FFE5E5E5">
+                <Button x:Name="buttonOpenFile" Content="Открыть" HorizontalAlignment="Center" VerticalAlignment="Top" Height="29" Width="159" Click="buttonOpenFile_Click" Margin="10,159,10,0"/>
+                <Button x:Name="buttonFindCountryName" Content="Найти" HorizontalAlignment="Left" Height="23" Margin="11,61,0,0" VerticalAlignment="Top" Width="158" Click="buttonFindCountryByName_Click"/>
+                <Button x:Name="buttonDelete" Content="Удалить" HorizontalAlignment="Left" Height="22" Margin="11,133,0,0" VerticalAlignment="Top" Width="158" Click="buttonDelete_Click"/>
+                <Label Content="Найти" HorizontalAlignment="Left" Height="26" Margin="11,10,0,0" VerticalAlignment="Top" Width="62"/>
+                <Label HorizontalAlignment="Left" Height="22" Margin="11,88,0,0" VerticalAlignment="Top" Width="73"/>
+                <TextBox x:Name="textBoxCountryName" HorizontalAlignment="Center" Height="16" Margin="11,36,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="158"/>
+                <TextBox x:Name="textBoxDeleteCountryName" TextWrapping="Wrap" Margin="10,110,10,69" RenderTransformOrigin="0.5,0.5"/>
+            </Grid>
+        </Expander>
+        <Expander Grid.Column="1" Header="Expander" HorizontalAlignment="Left" Height="100" Margin="10,32,0,0" Grid.Row="2" VerticalAlignment="Top" Width="181" IsExpanded="True">
+            <StackPanel x:Name="stackPanel" Height="63">
+                <RadioButton x:Name ="RadioButton1" Content="Textbox" Checked="RadioButton_Checked" AutomationProperties.Name="RB" />
+                <RadioButton x:Name ="RadioButton2" Content="Treeview" Checked="RadioButton_Checked" />
+                <RadioButton x:Name ="RadioButton3" Content="Listbox" Checked="RadioButton_Checked" />
+            </StackPanel>
+        </Expander>
+        <StackPanel HorizontalAlignment="Left" Height="299" VerticalAlignment="Top" Width="571" Margin="10,10,0,0" Grid.RowSpan="3">
+            <ListBox x:Name="ListBoxXML" Height="120"/>
+            <TextBox x:Name="textBlockXMLFileContent" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="121" Width="577" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Margin="0,0,-6,0"/>
+            <TreeView x:Name="TreeViewXML" Height="120" Margin="0,0,10,0"/>
+        </StackPanel>
+
+    </Grid>
+</Window>

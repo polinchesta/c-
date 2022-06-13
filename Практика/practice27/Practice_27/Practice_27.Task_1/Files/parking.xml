@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<parking>
+	<Auto>
+		<Mark>Opel</Mark>
+		<year>1999</year>
+		<RentDate>25</RentDate>
+	</Auto>
+</parking>
