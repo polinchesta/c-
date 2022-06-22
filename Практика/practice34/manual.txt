@@ -1,0 +1,6 @@
+
+«агрузить решение - AppSample в Visual Studio.
+
+—обрать проект УAppSampleФ, затем собрать проект InstallAppSaple,
+ после в этом проекте выполнить УInstallAppSaple.msiФ 
+по пути  \InstallAppSaple \bin\ Debug \InstallAppSaple.msi
